@@ -1,28 +1,32 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+@font-face {
+  font-family: "Open Sans Condensed";
+  src: url('../src/Source/Fonts/OpenSans_Condensed-Bold.ttf');
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  color: white;
+  background-image: url('../public/img/Rectangle 3 (2).png');
+  font-family: Open Sans Condensed;
+  font-weight: 100;
+}
+
+.head_left {
+  background: rgba(51, 51, 51, 0.75) !important;
+}
+
+.rotate {
+  transform: rotate(-90deg);
 }
