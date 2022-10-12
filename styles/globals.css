@@ -6,7 +6,11 @@
 
 @font-face {
   font-family: "Open Sans Condensed";
-  src: url('../src/Source/Fonts/OpenSans_Condensed-Bold.ttf');
+  src: url('../src/Fonts/OpenSans_Condensed-Regular.ttf');
+}
+
+a {
+  text-decoration: none;
 }
 
 body::-webkit-scrollbar{
@@ -15,16 +19,24 @@ body::-webkit-scrollbar{
 
 .header {
   width: 100%;
-  height: 100vh;
+  height: 1045px;
   display: flex;
+  overflow: hidden !important;
   color: white;
   background-image: url('../public/img/Rectangle 3 (2).png');
   font-family: Open Sans Condensed;
   font-weight: 100;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .head_left {
   background: rgba(51, 51, 51, 0.75) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
 }
 
 .rotate {
