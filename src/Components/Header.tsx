@@ -54,7 +54,7 @@ const Header = (props: Props) => {
               <Button w={'160px'} h={'50px'} bg={'#D1A954'} fontWeight={'100'} textTransform={'uppercase'}>афиша</Button>
             </Center>
 
-            <Box w={'52%'}>
+            <Box w={'52%'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
               <Box w={'400px'} h={'600px'} overflow={'hidden'} position={'relative'} display={'flex'} flexDirection={'column'} gap={'35px'}>
                 <Box position={'relative'} w={'100%'} h={'100%'}>
                   <img style={{ width: '380px', position: 'absolute', zIndex: 100 }} src={Books} alt={'books'} />
