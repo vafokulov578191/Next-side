@@ -55,27 +55,33 @@ body::-webkit-scrollbar {
 
 .bg {
   background-image: url('../public/img/Rectangle 15.png');
-  object-fit: cover;
+  object-fit: contain;
+  background-repeat: no-repeat;
 }
 
 .bg2 {
   background-image: url('../public/img/Rectangle 16.png');
-  object-fit: cover;
+  object-fit: contain;
+  background-repeat: no-repeat;
 }
 
 .bg3 {
   background-image: url('../public/img/Rectangle 15 (1).png');
   object-fit: cover;
+  background-repeat: no-repeat;
 }
 
 .bg4 {
   background-image: url('../public/img/Rectangle 15 (2).png');
   object-fit: cover;
+  background-repeat: no-repeat;
 }
 
 .rating {
   background-image: url('../public/img/Rectangle 28.png');
   object-fit: cover;
+  width: 100%;
+  background-size: cover;
 }
 
 .footer {
@@ -86,4 +92,3 @@ body::-webkit-scrollbar {
   margin: 0px auto;
   background-color: #333333;
 }
-

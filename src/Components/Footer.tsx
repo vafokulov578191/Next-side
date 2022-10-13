@@ -1,5 +1,4 @@
-import { Box, Button, Flex, Input, Text, Textarea } from '@chakra-ui/react'
-import Image from 'next/image'
+import { Box, Button, Flex, Input, Text, Textarea, Image } from '@chakra-ui/react'
 import React from 'react'
 import Gasprom from '../../public/Icons/logo.png'
 
@@ -11,18 +10,19 @@ const Footer = (props: Props) => {
 
   return (
     <div className='footer'>
-      <Box w={'1034px'} h={'440px'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginBottom={'120px'} textAlign={'center'} color={'white'}>
+      <Box w={{ xl: '1034px', lg: '1034px', md: '100%' }} h={'440px'} display={'flex'} pl={{ xl: '0px', lg: '0px', md: '35px' }} flexDirection={'column'} margin={'0px auto'} marginBottom={'120px'} textAlign={'center'} color={'white'}>
         <h1 style={{ fontSize: '50px', fontWeight: '300', textTransform: 'uppercase', marginBottom: '100px' }}><span style={{ color: '#D1A954' }}>партнеры</span> театра</h1>
-        <Box display={'grid'} gridTemplateColumns={'repeat(4, 1fr)'} gap={'80px'}>
+        <Box display={'grid'} gridTemplateColumns={'repeat(4, 1fr)'} gap={{ xl: '80px', lg: '80px', md: '30px' }} >
           {
-            [1, 2, 3, 4, 5, 6, 7, 8].map(item => <Image key={item} src={Gas} alt='alt' width={'200px'} height={'96px'} objectFit={'contain'} />)
+            [1, 2, 3, 4, 5, 6, 7, 8].map(item => <Image key={item} src={Gas} alt='alt' width={{ xl: '200px', lg: '200px', md: '150px' }}
+              height={'96px'} objectFit={'contain'} />)
           }
         </Box>
       </Box>
 
       {/* partners */}
 
-      <Box w={'1110px'} h={'360px'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginBottom={'80px'} gap={'100px'} textAlign={'center'} color={'white'} fontWeight={'300'}>
+      <Box w={{ xl: '1110px', lg: '1110px', md: '690px' }} h={'360px'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginBottom={'80px'} gap={'100px'} textAlign={'center'} color={'white'} fontWeight={'300'}>
         <h1 style={{ fontSize: '50px', textTransform: 'uppercase' }}><span style={{ color: '#D1A954' }}>стать</span> меценатом</h1>
         <Box w={'100%'} height={'100%'} display={'flex'} alignItems={'center'} gap={'100px'}>
           <Flex direction={'column'} w={'400px'} alignItems={'flex-start'} gap={'25px'} fontWeight={'700'}>
