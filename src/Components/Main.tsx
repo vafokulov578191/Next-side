@@ -1,13 +1,11 @@
-import { Box, Flex, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Stack, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
 import Armchair from '../../public/Icons/armchair 1.png'
 import Theatre from '../../public/Icons/theater 1.png'
 import Reaclang from '../../public/img/Rectangle 12.png'
-import Bg_img from '../../public/img/Rectangle 15.png'
-import Bg_img2 from '../../public/img/Rectangle 16.png'
-import Bg_img3 from '../../public/img/Rectangle 15 (1).png'
-import Bg_im4 from '../../public/img/Rectangle 15 (2).png'
+import { Search2Icon, StarIcon } from '@chakra-ui/icons'
+
 
 type Props = {}
 
@@ -15,10 +13,6 @@ const Main = (props: Props) => {
   const Icon: string = Armchair.src
   const Icon2: string = Theatre.src
   const Img: string = Reaclang.src
-  const Bg: string = Bg_img.src
-  const Bg2: string = Bg_img2.src
-  const Bg3: string = Bg_img3.src
-  const Bg4: string = Bg_im4.src
 
   return (
     <div className='Main'>
@@ -48,13 +42,49 @@ const Main = (props: Props) => {
 
       {/* last block */}
 
-      <Box w={'1770px'} height={'730px'} display={'flex'} flexDirection={'column'} color={'white'} position={'relative'} left={'150px'} marginBottom={'150px'}>
+      <Box w={'1730px'} height={'715px'} display={'flex'} flexDirection={'column'} color={'white'} position={'relative'} left={'200px'} marginBottom={'150px'}>
         <h1 style={{ margin: '0px auto', fontSize: '50px', fontWeight: '300', marginBottom: '100px' }}><span style={{ color: '#D1A954' }}>наши</span> постановки</h1>
         <Box display={'grid'} gridTemplateColumns={'repeat(4, 1fr)'} h={'550px !important'}>
-          <Flex className='bg' p={'40px'} >awdawd</Flex>
-          <Flex className='bg2' p={'40px'} >awdawd</Flex>
-          <Flex className='bg3' p={'40px'} >awdwa</Flex>
-          <Flex className='bg4' p={'40px'} >awdaw</Flex>
+          <Flex className='bg' flexDirection={'column'} justifyContent={'space-between'} p={'40px'} textTransform={'uppercase'} overflow={'hidden'} position={'relative'} fontWeight={'700'} >
+            <Text>ОСКАР 2020</Text>
+            <Text position={'absolute'} fontWeight={'700'} bottom={'85px'} left={'-10px'} transform={'rotate(-90deg)'}>сентябрь 2020</Text>
+          </Flex>
+          <Flex className='bg2' p={'40px'} display={'flex'} alignItems={'center'} justifyContent={'center'} >
+            <Button bg={'#D1A954'} w={'100px'} h={'100px'} borderRadius={'100%'}>
+              <Search2Icon w={'30px'} h={'30px'} />
+            </Button>
+          </Flex>
+          <Flex className='bg3' p={'40px'} flexDirection={'column'} justifyContent={'space-between'} textTransform={'uppercase'} overflow={'hidden'} position={'relative'} fontWeight={'700'} >
+            <Text>золотой грамофон</Text>
+            <Text position={'absolute'} fontWeight={'700'} bottom={'85px'} left={'-10px'} transform={'rotate(-90deg)'}>июль 2020</Text>
+          </Flex>
+          <Flex className='bg4' p={'40px'} flexDirection={'column'} justifyContent={'space-between'} textTransform={'uppercase'} overflow={'hidden'} position={'relative'} fontWeight={'700'} >
+            <Text>щелкунчик</Text>
+            <Text position={'absolute'} fontWeight={'700'} bottom={'85px'} left={'-10px'} transform={'rotate(-90deg)'}>май 2020</Text>
+          </Flex>
+        </Box>
+      </Box>
+
+      {/* Postanovki */}
+
+      <Box className='rating' w={'1110px'} h={'550px'} margin={'0px auto'} marginBottom={'150px'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
+        <Box w={'750px'} h={'300px'} display={'flex'} flexDirection={'column'} color={'#D1A954'} fontWeight={'700'}>
+          <Flex gap={'130px'} alignItems={'center'}>
+            <Text fontSize={'70px'}>2018</Text>
+            <Box display={'flex'} gap={'30px'}>
+              {
+                [1, 2, 3, 4, 5].map(item => <StarIcon key={item} w={'26px'} cursor={'pointer'} height={'26px'} color={'#D1A954'} />)
+              }
+            </Box>
+          </Flex>
+          <Flex gap={'130px'} alignItems={'center'}>
+            <Text fontSize={'70px'}>2019</Text>
+            <Text fontSize={'36px'} color={'white'}>Лучший театр</Text>
+          </Flex>
+          <Flex gap={'130px'} alignItems={'center'}>
+            <Text fontSize={'70px'}>2020</Text>
+            <Text fontSize={'36px'} color={'white'}>по мнению театральных критиков Парижа</Text>
+          </Flex>
         </Box>
       </Box>
     </div>

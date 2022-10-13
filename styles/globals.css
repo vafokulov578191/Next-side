@@ -72,3 +72,18 @@ body::-webkit-scrollbar {
   background-image: url('../public/img/Rectangle 15 (2).png');
   object-fit: cover;
 }
+
+.rating {
+  background-image: url('../public/img/Rectangle 28.png');
+  object-fit: cover;
+}
+
+.footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  background-color: #333333;
+}
+
