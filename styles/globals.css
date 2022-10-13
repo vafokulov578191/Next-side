@@ -13,7 +13,7 @@ a {
   text-decoration: none;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
@@ -41,4 +41,34 @@ body::-webkit-scrollbar{
 
 .rotate {
   transform: rotate(-90deg);
+}
+
+
+.Main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  background-color: #333333;
+}
+
+.bg {
+  background-image: url('../public/img/Rectangle 15.png');
+  object-fit: cover;
+}
+
+.bg2 {
+  background-image: url('../public/img/Rectangle 16.png');
+  object-fit: cover;
+}
+
+.bg3 {
+  background-image: url('../public/img/Rectangle 15 (1).png');
+  object-fit: cover;
+}
+
+.bg4 {
+  background-image: url('../public/img/Rectangle 15 (2).png');
+  object-fit: cover;
 }

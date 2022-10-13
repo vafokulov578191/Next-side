@@ -25,7 +25,7 @@ const Header = (props: Props) => {
   return (
     <div className='header'>
 
-      <Box className='head_left' w={'220px'} height={'100%'} overflow={'hidden !important'} position={'fixed'} paddingBottom={'90px'}>
+      <Box className='head_left' w={'200px'} height={'100%'} overflow={'hidden !important'} position={'fixed'} paddingBottom={'90px'}>
         <Text fontSize={'22px'} transform={'rotate(-90deg)'} marginBottom={'65px'} color={'#C4C4C4'} fontWeight={'600'}>контактная информация</Text>
         <Box w={'90px'} h={'3px'} bgColor={'#C4C4C4'} transform={'rotate(-90deg)'} marginBottom={'45px'} marginTop={'45px'}></Box>
         <Image src={Icon} alt="Icons" width={26} height={26} />
