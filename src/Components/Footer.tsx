@@ -25,7 +25,7 @@ const Footer = (props: Props) => {
       <Box w={{ xl: '1110px', lg: '1110px', md: '690px' }} h={'360px'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginBottom={'80px'} gap={'100px'} textAlign={'center'} color={'white'} fontWeight={'300'}>
         <h1 style={{ fontSize: '50px', textTransform: 'uppercase' }}><span style={{ color: '#D1A954' }}>стать</span> меценатом</h1>
         <Box w={'100%'} height={'100%'} display={'flex'} alignItems={'center'} gap={'100px'}>
-          <Flex direction={'column'} w={'400px'} alignItems={'flex-start'} gap={'25px'} fontWeight={'700'}>
+          <Flex display={{xl: 'flex', lg: 'flex', md: 'none'}} direction={'column'} w={'400px'} alignItems={'flex-start'} gap={'25px'} fontWeight={'700'}>
             <Text>+7 (812) 123-45-55</Text>
             <Text>+7 (812) 123-45-66</Text>
             <Text>info@theater.ru</Text>
@@ -34,7 +34,7 @@ const Footer = (props: Props) => {
 
           <form style={{ height: '100%', width: '100%', display: 'flex', flexDirection: 'column', gap: '40px', alignItems: 'flex-end', justifyContent: 'flex-end' }}>
 
-            <Box w={'100%'} display={'flex'}>
+            <Box w={'100%'} display={'flex'} gap={{xl: '0px', lg: '0px', md: '20px'}}>
               <Flex w={'220px'} direction={'column'} gap={'30px'}>
                 <Input pl={'15px'} w={'200px'} h={'35px'} placeholder='Имя' />
                 <Input pl={'15px'} w={'200px'} h={'35px'} placeholder='Телефон' />
