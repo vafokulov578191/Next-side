@@ -74,9 +74,9 @@ body::-webkit-scrollbar {
 
 .rating {
   background-image: url('../public/img/Rectangle 28.png');
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
-  background-size: cover;
+  background-size: contain;
 }
 
 .footer {
