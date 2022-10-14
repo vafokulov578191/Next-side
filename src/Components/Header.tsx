@@ -1,14 +1,16 @@
 import React from 'react'
-import { Box, Text, HStack, Link, Flex, Center, Button } from '@chakra-ui/react';
+import { Box, Text, HStack, Link, Flex, Center, Button, Image as Img } from '@chakra-ui/react';
 import Instagram from '../../public/Icons/Instagram.png'
 import Facebook from '../../public/Icons/Vector.png'
 import Wk from '../../public/Icons/Vector (1).png'
 import Youtube from '../../public/Icons/Vector (2).png'
-import Image from 'next/image';
 import Book from '../../public/img/image 3 (1).png'
 import Book1 from '../../public/img/image 4 (1).png'
 import Prev from '../../public/Icons/Arrow 1 (1).png'
 import Next from '../../public/Icons/Arrow 1 (2).png'
+import burger from '../../public/Icons/bx_bx-menu-alt-left.png'
+import Image from 'next/image';
+
 
 type Props = {}
 
@@ -21,38 +23,42 @@ const Header = (props: Props) => {
   const Books1: string = Book1.src
   const Button1: string = Prev.src
   const Button2: string = Next.src
+  const Burger: string = burger.src
 
   return (
-    <div className='header'>
+    <Box className='header' h={{ xl: '1045px', lg: '1045px', md: '1045px', sm: '800px' }}>
 
-      <Box className='head_left' w={'200px'} height={'100%'} overflow={'hidden !important'} position={'fixed'} paddingBottom={'90px'}>
+      <Box className='head_left' display={{ xl: 'flex', lg: 'flex', md: 'flex', sm: 'none' }} flexDirection={'column'} alignItems={'center'} w={'200px'} height={'100%'} justifyContent={'flex-end'} gap={'40px'} overflow={'hidden !important'} position={'fixed'} paddingBottom={'90px'}>
         <Text fontSize={'22px'} transform={'rotate(-90deg)'} marginBottom={'65px'} color={'#C4C4C4'} fontWeight={'600'}>контактная информация</Text>
         <Box w={'90px'} h={'3px'} bgColor={'#C4C4C4'} transform={'rotate(-90deg)'} marginBottom={'45px'} marginTop={'45px'}></Box>
-        <Image src={Icon} alt="Icons" width={26} height={26} />
-        <Image src={Icon1} alt="Icons" width={15} height={26} />
+        <Image src={Icon} alt="Icons" width={26} objectFit={'contain'} height={26} />
+        <Image src={Icon1} alt="Icons" width={15} objectFit={'contain'} height={26} />
         <Image src={Icon2} alt="Icons" width={24} height={14} />
-        <Image src={Icon3} alt="Icons" width={26} height={18} />
+        <Image src={Icon3} alt="Icons" width={26} height={18} objectFit={'contain'} />
       </Box>
+
+      <Img src={Burger} display={{ xl: 'none', lg: 'none', md: 'none', sm: 'block' }} alt='alt' objectFit={'contain'} w={'40px'} h={'40px'} marginTop={'50px'} marginLeft={'35px'} />
 
       {/* left side */}
 
       <Box w={'100%'} h={'100%'}>
-        <Box w={'1100px'} h={'100%'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginTop={'55px'}>
-          <HStack fontWeight={'600'} textTransform={'uppercase'} display={'flex'} alignItems={'center'} flexDirection={{ xl: 'row', lg: 'row', md: 'column' }} justifyContent={'center'}>
-            <HStack spacing={{ xl: '80px', lg: '80px', md: '40px' }}>
+        <Box w={{ xl: '1100px', lg: '1100px', md: '1100px', sm: '700px' }} h={'100%'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginTop={'55px'}>
+          <HStack fontWeight={'600'} textTransform={'uppercase'} alignItems={'center'} flexDirection={{ xl: 'row', lg: 'row', md: 'column', }} justifyContent={'center'}>
+            <HStack spacing={{ xl: '80px', lg: '80px', md: '40px' }} display={{ xl: 'flex', lg: 'flex', md: 'flex', sm: 'none' }}>
               <Link>Главная</Link>
               <Link>о театре</Link>
               <Link>Наши постановки</Link>
               <Link>партнеры театра</Link>
               <Link>контакты</Link>
             </HStack>
-            <Link fontWeight={'700'} borderBottom={'2px solid #D1A954'} marginTop={{ xl: '0px !important', lg: '0px !important', md: '50px !important', sm: '0px !important' }} marginLeft={{ xl: '300px', lg: '300px', md: '0px' }}>+7 495 123-45-67</Link>
+            <Link fontWeight={'700'} borderBottom={'2px solid #D1A954'} marginTop={{ xl: '0px !important', lg: '0px !important', md: '50px !important', sm: '0px !important' }} marginLeft={{ xl: '300px !important', lg: '300px !important', md: '0px !important', sm: '67% !important' }}>+7 495 123-45-67</Link>
           </HStack>
 
-          <Flex justifyContent={{ xl: 'space-between', lg: 'space-between', md: 'center', sm: 'center' }} alignItems={{ xl: 'baseline', lg: 'baseline', md: 'flex-start' }} margin={{ xl: '0px auto', lg: '0px auto', md: '0px' }} position={'relative'} right={{ xl: '0px', lg: '0px ', md: '60px' }} marginTop={{ xl: '10%', lg: '10%', md: '320px' }} >
-            <Center flexDirection={'column'} gap={'30px'} w={'42%'} alignItems={'flex-start'}>
+          <Flex justifyContent={{ xl: 'space-between', lg: 'space-between', md: 'center', sm: 'center' }} alignItems={{ xl: 'center', lg: 'center', md: 'flex-start', sm: 'center' }} margin={{ xl: '0px auto', lg: '0px auto', md: '0px' }} position={'relative'} right={{ xl: '0px', lg: '0px ', md: '60px' }} marginTop={{ xl: '10% !important', lg: '10% !important', md: '320px !important', sm: '170px' }} >
+
+            <Center flexDirection={'column'} gap={'30px'} w={{ xl: '42%', lg: '42%', md: '42%', sm: '90%' }} alignItems={'flex-start'} justifyContent={'center'}>
               <h1 style={{ fontSize: '70px', fontWeight: '700' }}>Большой театр</h1>
-              <Text variant={'p'}>Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах, с 1886 года — Петербургская консерватория. Первое постоянное в Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных зданий в Европе XVIII.</Text>
+              <Text variant={'p'} w={'540px'}>Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах, с 1886 года — Петербургская консерватория. Первое постоянное в Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных зданий в Европе XVIII.</Text>
               <Button w={'160px'} h={'50px'} bg={'#D1A954'} fontWeight={'100'} textTransform={'uppercase'}>афиша</Button>
             </Center>
 
@@ -72,7 +78,6 @@ const Header = (props: Props) => {
                     <Image src={Button2} alt={'button'} width={'40px'} height={'0px'} objectFit={'contain'} />
                   </Box>
                 </Flex>
-
               </Box>
             </Box>
 
@@ -81,7 +86,7 @@ const Header = (props: Props) => {
           </Flex>
         </Box>
       </Box>
-    </div>
+    </Box>
   )
 }
 

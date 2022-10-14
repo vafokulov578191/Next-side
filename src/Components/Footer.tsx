@@ -57,7 +57,7 @@ const Footer = (props: Props) => {
 
       {/* Forms */}
 
-      <Box w={'1110px'} h={'50px'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginBottom={'30px'}>
+      <Box w={{xl: '1110px', lg: '1110px', md: '700px'}} h={'50px'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginBottom={'30px'}>
         <Flex w={'100%'} h={'2px'} bgColor={'#565656'}></Flex>
         <Box color={'#989898'} display={'flex'} w={'100%'} h={'100%'} alignItems={'flex-end'} justifyContent={'space-between'}>
           <Text>(с) Все права защищены. Большой театр. 2020</Text>

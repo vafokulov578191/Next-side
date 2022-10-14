@@ -43,7 +43,7 @@ const Main = (props: Props) => {
 
       <Box w={{ xl: '1730px', lg: '1730px', md: '1000px' }} height={'715px'} display={'flex'} flexDirection={'column'} color={'white'} position={'relative'} left={'200px'} marginBottom={'150px'}>
         <h1 style={{ margin: '0px auto', fontSize: '50px', fontWeight: '300', marginBottom: '100px' }}><span style={{ color: '#D1A954' }}>наши</span> постановки</h1>
-        <Box display={'grid'} w={'885px'} gridTemplateColumns={{ xl: 'repeat(4, 1fr)', lg: 'repeat(4, 1fr)', md: 'repeat(2, 1fr)' }} h={'550px !important'}>
+        <Box display={'grid'} w={{xl: '100%', lg: '100%', md: '880px'}} gridTemplateColumns={{ xl: 'repeat(4, 1fr)', lg: 'repeat(4, 1fr)', md: 'repeat(2, 1fr)' }} h={'550px !important'}>
           <Flex className='bg' flexDirection={'column'} justifyContent={'space-between'} p={'40px'} textTransform={'uppercase'} overflow={'hidden'} position={'relative'} fontWeight={'700'} >
             <Text>ОСКАР 2020</Text>
             <Text position={'absolute'} fontWeight={'700'} bottom={'85px'} left={'-10px'} transform={'rotate(-90deg)'}>сентябрь 2020</Text>
@@ -66,7 +66,7 @@ const Main = (props: Props) => {
 
       {/* Postanovki */}
 
-      <Box className='rating' w={{xl: '1110px', lg: '1110px', md: '100%'}} h={'550px'} margin={'0px auto'} marginBottom={'150px'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
+      <Box className='rating' w={{ xl: '1110px', lg: '1110px', md: '100%' }} h={'550px'} margin={'0px auto'} marginBottom={'150px'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
         <Box w={'750px'} h={'300px'} display={'flex'} flexDirection={'column'} color={'#D1A954'} fontWeight={'700'}>
           <Flex gap={'130px'} alignItems={'center'}>
             <Text fontSize={'70px'}>2018</Text>

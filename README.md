@@ -18,7 +18,12 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## Figma maket
+
+https://www.figma.com/file/zsSm57Dau3GsM4yret0zdI/%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9-%D1%82%D0%B5%D0%B0%D1%82%D1%80-%2B?node-id=0%3A1
+
 ## Learn More
+
 
 To learn more about Next.js, take a look at the following resources:
 
