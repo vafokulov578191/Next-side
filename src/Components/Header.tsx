@@ -65,8 +65,8 @@ const Header = (props: Props) => {
             <Box w={'52%'} display={{ xl: 'flex', lg: 'flex', md: 'none', sm: 'none' }} alignItems={'center'} justifyContent={'center'}>
               <Box w={'400px'} h={'600px'} overflow={'hidden'} position={'relative'} display={'flex'} flexDirection={'column'} gap={'35px'}>
                 <Box position={'relative'} w={'100%'} h={'100%'} >
-                  <img style={{ width: '380px', position: 'absolute', zIndex: 100 }} src={Books} alt={'books'} />
-                  <img style={{ width: '100%', position: 'absolute', zIndex: 10, }} src={Books1} alt={'books'} width={'370px'} height={'570px'} objectFit={'cover'} />
+                  <Img style={{ width: '380px', position: 'absolute', zIndex: 100 }} src={Books} alt={'books'} />
+                  <Img style={{ width: '100%', position: 'absolute', zIndex: 10, }} src={Books1} alt={'books'} width={'370px'} height={'570px'} objectFit={'cover'} />
                 </Box>
                 <Flex w={'100%'} justifyContent={'space-between'} position={'absolute'} bottom={'-10px'}>
                   <Box w={'120px'} h={'30px'} bg={'none'} display={'flex'} gap={'30px'} cursor={'pointer'}>
