@@ -11,10 +11,17 @@ const Footer = (props: Props) => {
   return (
     <div className='footer'>
       <Box w={{ xl: '1034px', lg: '1034px', md: '100%' }} h={'440px'} display={'flex'} pl={{ xl: '0px', lg: '0px', md: '35px' }} flexDirection={'column'} margin={'0px auto'} marginBottom={{ xl: '120px', lg: '120px', md: '120px', sm: '90px' }} textAlign={'center'} color={'white'}>
-        <h1 style={{ fontSize: '50px', fontWeight: '300', textTransform: 'uppercase', marginBottom: '100px' }}><span style={{ color: '#D1A954' }}>партнеры</span> театра</h1>
-        <Box display={'grid'} gridTemplateColumns={'repeat(4, 1fr)'} gap={{ xl: '80px', lg: '80px', md: '30px' }} gridGap={{ xl: '0px', lg: '0px', md: '0px', sm: '20px' }} >
+        <Text marginBottom={{ xl: '100px', lg: '100px', md: '100px', sm: '100px', sl: '40px' }} style={{ fontSize: '50px', fontWeight: '300', textTransform: 'uppercase' }}><span style={{ color: '#D1A954' }}>партнеры</span> театра</Text>
+        <Box display={{ xl: 'grid', lg: 'grid', md: 'grid', sm: 'grid', sl: 'none' }} gridTemplateColumns={'repeat(4, 1fr)'} gap={{ xl: '80px', lg: '80px', md: '30px' }} gridGap={{ xl: '0px', lg: '0px', md: '0px', sm: '20px' }} >
           {
             [1, 2, 3, 4, 5, 6, 7, 8].map(item => <Image key={item} src={Gas} alt='alt' width={{ xl: '200px', lg: '200px', md: '150px', sm: '150px' }}
+              height={'96px'} objectFit={'contain'} />)
+          }
+        </Box>
+
+        <Box display={{ xl: 'none', lg: 'none', md: 'none', sm: 'none', sl: 'grid' }} gridTemplateColumns={'repeat(2, 1fr)'} gap={{ xl: '80px', lg: '80px', md: '30px' }} gridGap={{ xl: '0px', lg: '0px', md: '0px', sm: '20px', sl: '20px' }} >
+          {
+            [1, 2, 3, 4,].map(item => <Image key={item} src={Gas} alt='alt' width={{ xl: '200px', lg: '200px', md: '150px', sm: '150px' }}
               height={'96px'} objectFit={'contain'} />)
           }
         </Box>
@@ -22,10 +29,10 @@ const Footer = (props: Props) => {
 
       {/* partners */}
 
-      <Box w={{ xl: '1110px', lg: '1110px', md: '690px' }} h={'360px'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginBottom={'80px'} gap={'100px'} textAlign={'center'} color={'white'} fontWeight={'300'}>
-        <h1 style={{ fontSize: '50px', textTransform: 'uppercase' }}><span style={{ color: '#D1A954' }}>стать</span> меценатом</h1>
+      <Box w={{ xl: '1110px', lg: '1110px', md: '690px', sl: '100%' }} h={'360px'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginBottom={'80px'} gap={'100px'} textAlign={'center'} color={'white'} fontWeight={'300'}>
+        <Text fontSize={{ xl: '50px', lg: '50px', md: '50px', sm: '50px', sl: '45px' }} style={{ textTransform: 'uppercase' }}><span style={{ color: '#D1A954' }}>стать</span> меценатом</Text>
         <Box w={'100%'} height={'100%'} display={'flex'} alignItems={'center'} gap={'100px'}>
-          <Flex display={{ xl: 'flex', lg: 'flex', md: 'none', sm: 'none' }} direction={'column'} w={'400px'} alignItems={'flex-start'} gap={'25px'} fontWeight={'700'}>
+          <Flex display={{ xl: 'flex', lg: 'flex', md: 'none', sm: 'none', sl: 'none' }} direction={'column'} w={'400px'} alignItems={'flex-start'} gap={'25px'} fontWeight={'700'}>
             <Text>+7 (812) 123-45-55</Text>
             <Text>+7 (812) 123-45-66</Text>
             <Text>info@theater.ru</Text>
@@ -57,9 +64,9 @@ const Footer = (props: Props) => {
 
       {/* Forms */}
 
-      <Box w={{ xl: '1110px', lg: '1110px', md: '700px', sm: '650px' }} h={'50px'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginBottom={'30px'}>
+      <Box w={{ xl: '1110px', lg: '1110px', md: '700px', sm: '650px', sl: '450px' }} h={'50px'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginBottom={'30px'}>
         <Flex w={'100%'} h={'2px'} bgColor={'#565656'}></Flex>
-        <Box color={'#989898'} display={'flex'} w={'100%'} h={'100%'} alignItems={'flex-end'} justifyContent={'space-between'}>
+        <Box color={'#989898'} display={'flex'} w={'100%'} h={'100%'} fontSize={{ xl: '16px', lg: '16px', md: '16px', sm: '16px', sl: '14px' }} alignItems={'flex-end'} justifyContent={'space-between'}>
           <Text>(с) Все права защищены. Большой театр. 2020</Text>
           <Text>Разработано d-e-n.ru</Text>
         </Box>
