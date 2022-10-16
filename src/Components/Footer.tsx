@@ -34,7 +34,7 @@ const Footer = (props: Props) => {
 
           <form style={{ height: '100%', width: '100%', display: 'flex', flexDirection: 'column', gap: '40px', alignItems: 'flex-end', justifyContent: 'flex-end' }}>
 
-            <Box w={'100%'} display={'flex'} gap={{ xl: '0px', lg: '0px', md: '20px' }}>
+            <Box w={{ xl: '100%', lg: '100%', md: '100%', sm: '650px' }} display={'flex'} gap={{ xl: '0px', lg: '0px', md: '20px', sm: '10px' }}>
               <Flex w={'220px'} direction={'column'} gap={'30px'}>
                 <Input pl={'15px'} w={'200px'} h={'35px'} placeholder='Имя' />
                 <Input pl={'15px'} w={'200px'} h={'35px'} placeholder='Телефон' />
@@ -48,7 +48,7 @@ const Footer = (props: Props) => {
 
 
             <Box w={'100%'} display={'flex'} justifyContent={'space-between'}>
-              <Text w={'460px'} textAlign={'start'} color={'#989898'}>* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</Text>
+              <Text w={{ xl: '460px', lg: '460px', md: '460px', sm: '416px' }} textAlign={'start'} color={'#989898'}>* Ваши данные не будут переданы третьим лицам, 100% вероятность. Конфиденциальность мы гарантируем, и защищаем персональные данные согласно законку ФЗ-52.</Text>
               <Input w={'190px'} h={'50px'} bg={'#D1A954'} cursor={'pointer'} type={'submit'} />
             </Box>
           </form>
@@ -57,7 +57,7 @@ const Footer = (props: Props) => {
 
       {/* Forms */}
 
-      <Box w={{ xl: '1110px', lg: '1110px', md: '700px', sm: '700px' }} h={'50px'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginBottom={'30px'}>
+      <Box w={{ xl: '1110px', lg: '1110px', md: '700px', sm: '650px' }} h={'50px'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginBottom={'30px'}>
         <Flex w={'100%'} h={'2px'} bgColor={'#565656'}></Flex>
         <Box color={'#989898'} display={'flex'} w={'100%'} h={'100%'} alignItems={'flex-end'} justifyContent={'space-between'}>
           <Text>(с) Все права защищены. Большой театр. 2020</Text>

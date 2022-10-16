@@ -1,5 +1,5 @@
-import React from 'react'
-import { Box, Text, HStack, Link, Flex, Center, Button, Image as Img } from '@chakra-ui/react';
+import React, { useState } from 'react'
+import { Box, Text, HStack, Link, Flex, Center, Button, Image as Img, useDisclosure, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody } from '@chakra-ui/react';
 import Instagram from '../../public/Icons/Instagram.png'
 import Facebook from '../../public/Icons/Vector.png'
 import Wk from '../../public/Icons/Vector (1).png'
@@ -15,6 +15,10 @@ import Image from 'next/image';
 type Props = {}
 
 const Header = (props: Props) => {
+  const [size, setSize] = useState('')
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+
   const Icon: string = Instagram.src
   const Icon1: string = Facebook.src
   const Icon2: string = Wk.src
@@ -24,6 +28,14 @@ const Header = (props: Props) => {
   const Button1: string = Prev.src
   const Button2: string = Next.src
   const Burger: string = burger.src
+
+
+  const handleClick = (newSize) => {
+    setSize(newSize)
+    onOpen()
+  }
+
+  const sizes = ['xs']
 
   return (
     <Box className='header' h={{ xl: '1045px', lg: '1045px', md: '1045px', sm: '800px' }}>
@@ -37,7 +49,34 @@ const Header = (props: Props) => {
         <Image src={Icon3} alt="Icons" width={26} height={18} objectFit={'contain'} />
       </Box>
 
-      <Img src={Burger} display={{ xl: 'none', lg: 'none', md: 'none', sm: 'block' }} alt='alt' objectFit={'contain'} w={'40px'} h={'40px'} marginTop={'50px'} marginLeft={'35px'} />
+      <Box display={{ xl: 'none', lg: 'none', md: 'none', sm: 'block' }} marginTop={'40px'}>
+        {sizes.map((size) => (
+          <Img src={Burger} alt='alt' objectFit={'contain'} w={'40px'} h={'40px'} onClick={() => handleClick(size)}
+            key={size}
+            m={4} />
+        ))}
+
+        <Drawer placement='left' onClose={onClose} isOpen={isOpen} size={size}>
+          <DrawerOverlay />
+          <DrawerContent h={'800px'} padding={'40px'} bgColor='#333333' color={'white'}>
+            <DrawerCloseButton border={'none'} />
+            <DrawerBody w={'400px'} fontSize={'24px'} marginTop={'60px'} display={'flex'} flexDirection={'column'} gap={'35px'} fontWeight={'700'}>
+              <Text>Главная</Text>
+              <Text>о театре</Text>
+              <Text>Наши постановки</Text>
+              <Text>партнеры театра</Text>
+              <Text>контакты</Text>
+
+              <Box w={'140px'} display={'flex'} gap={'60px'} flexWrap={'wrap'} alignItems={'center'} marginTop={'30px'} marginLeft={'40px'}>
+                <Image src={Icon} alt="Icons" width={26} objectFit={'contain'} height={26} />
+                <Image src={Icon1} alt="Icons" width={15} objectFit={'contain'} height={26} />
+                <Image src={Icon2} alt="Icons" width={24} height={14} />
+                <Image src={Icon3} alt="Icons" width={26} height={18} objectFit={'contain'} />
+              </Box>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      </Box>
 
       {/* left side */}
 
