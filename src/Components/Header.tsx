@@ -38,9 +38,9 @@ const Header = (props: Props) => {
   const sizes = ['xs']
 
   return (
-    <Box className='header' h={{ xl: '1045px', lg: '1045px', md: '1045px', sm: '800px' }}>
+    <Box className='header' h={{ xl: '1045px', lg: '1045px', md: '1045px', sm: '800px', sl: '100%' }}>
 
-      <Box className='head_left' display={{ xl: 'flex', lg: 'flex', md: 'flex', sm: 'none' }} flexDirection={'column'} alignItems={'center'} w={'200px'} height={'100%'} justifyContent={'flex-end'} gap={'40px'} overflow={'hidden !important'} position={'fixed'} paddingBottom={'90px'}>
+      <Box className='head_left' display={{ xl: 'flex', lg: 'flex', md: 'flex', sm: 'none', sl: 'none' }} flexDirection={'column'} alignItems={'center'} w={'200px'} height={'100%'} justifyContent={'flex-end'} gap={'40px'} overflow={'hidden !important'} position={'fixed'} paddingBottom={'90px'}>
         <Text fontSize={'22px'} transform={'rotate(-90deg)'} marginBottom={'65px'} color={'#C4C4C4'} fontWeight={'600'}>контактная информация</Text>
         <Box w={'90px'} h={'3px'} bgColor={'#C4C4C4'} transform={'rotate(-90deg)'} marginBottom={'45px'} marginTop={'45px'}></Box>
         <Image src={Icon} alt="Icons" width={26} objectFit={'contain'} height={26} />
@@ -49,7 +49,7 @@ const Header = (props: Props) => {
         <Image src={Icon3} alt="Icons" width={26} height={18} objectFit={'contain'} />
       </Box>
 
-      <Box display={{ xl: 'none', lg: 'none', md: 'none', sm: 'block' }} marginTop={'40px'}>
+      <Box display={{ xl: 'none', lg: 'none', md: 'none', sm: 'block', sl: 'block' }} marginTop={'40px'}>
         {sizes.map((size) => (
           <Img src={Burger} alt='alt' objectFit={'contain'} w={'40px'} h={'40px'} onClick={() => handleClick(size)}
             key={size}
@@ -58,9 +58,9 @@ const Header = (props: Props) => {
 
         <Drawer placement='left' onClose={onClose} isOpen={isOpen} size={size}>
           <DrawerOverlay />
-          <DrawerContent h={'800px'} padding={'40px'} bgColor='#333333' color={'white'}>
+          <DrawerContent h={{ sm: '800px', sl: '100%' }} padding={'40px'} bgColor='#333333' color={'white'}>
             <DrawerCloseButton border={'none'} />
-            <DrawerBody w={'400px'} fontSize={'24px'} marginTop={'60px'} display={'flex'} flexDirection={'column'} gap={'35px'} fontWeight={'700'}>
+            <DrawerBody w={{ sm: '400px', sl: '400px' }} fontSize={'24px'} marginTop={'60px'} display={'flex'} flexDirection={'column'} gap={'35px'} fontWeight={'700'}>
               <Text>Главная</Text>
               <Text>о театре</Text>
               <Text>Наши постановки</Text>
@@ -81,27 +81,27 @@ const Header = (props: Props) => {
       {/* left side */}
 
       <Box w={'100%'} h={'100%'}>
-        <Box w={{ xl: '1100px', lg: '1100px', md: '1100px', sm: '700px' }} h={'100%'} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginTop={'55px'}>
+        <Box w={{ xl: '1100px', lg: '1100px', md: '1100px', sm: '700px', sl: '100%' }} h={{ xl: '100%', lg: '100%', md: '100%', sm: '100%', sl: '600px' }} display={'flex'} flexDirection={'column'} margin={'0px auto'} marginTop={'55px'}>
           <HStack fontWeight={'600'} textTransform={'uppercase'} alignItems={'center'} flexDirection={{ xl: 'row', lg: 'row', md: 'column', }} justifyContent={'center'}>
-            <HStack spacing={{ xl: '80px', lg: '80px', md: '40px' }} display={{ xl: 'flex', lg: 'flex', md: 'flex', sm: 'none' }}>
+            <HStack spacing={{ xl: '80px', lg: '80px', md: '40px' }} display={{ xl: 'flex', lg: 'flex', md: 'flex', sm: 'none', sl: 'none' }}>
               <Link>Главная</Link>
               <Link>о театре</Link>
               <Link>Наши постановки</Link>
               <Link>партнеры театра</Link>
               <Link>контакты</Link>
             </HStack>
-            <Link fontWeight={'700'} borderBottom={'2px solid #D1A954'} marginTop={{ xl: '0px !important', lg: '0px !important', md: '50px !important', sm: '0px !important' }} marginLeft={{ xl: '300px !important', lg: '300px !important', md: '0px !important', sm: '67% !important' }}>+7 495 123-45-67</Link>
+            <Link fontWeight={'700'} borderBottom={'2px solid #D1A954'} marginTop={{ xl: '0px !important', lg: '0px !important', md: '50px !important', sm: '0px !important' }} marginLeft={{ xl: '300px !important', lg: '300px !important', md: '0px !important', sm: '67% !important', sl: '68% !important' }}>+7 495 123-45-67</Link>
           </HStack>
 
-          <Flex justifyContent={{ xl: 'space-between', lg: 'space-between', md: 'center', sm: 'center' }} alignItems={{ xl: 'center', lg: 'center', md: 'flex-start', sm: 'center' }} margin={{ xl: '0px auto', lg: '0px auto', md: '0px' }} position={'relative'} right={{ xl: '0px', lg: '0px ', md: '60px' }} marginTop={{ xl: '10% !important', lg: '10% !important', md: '320px !important', sm: '170px' }} >
+          <Flex justifyContent={{ xl: 'space-between', lg: 'space-between', md: 'center', sm: 'center' }} alignItems={{ xl: 'center', lg: 'center', md: 'flex-start', sm: 'center' }} margin={{ xl: '0px auto', lg: '0px auto', md: '0px' }} position={'relative'} right={{ xl: '0px', lg: '0px ', md: '60px' }} marginTop={{ xl: '10% !important', lg: '10% !important', md: '320px !important', sm: '170px', sl: '115px' }} >
 
-            <Center flexDirection={'column'} gap={'30px'} w={{ xl: '42%', lg: '42%', md: '42%', sm: '90%' }} alignItems={'flex-start'} justifyContent={'center'}>
-              <h1 style={{ fontSize: '70px', fontWeight: '700' }}>Большой театр</h1>
-              <Text variant={'p'} w={{ xl: '100%', lg: '100%', md: '100%', sm: '530px' }} position={'relative'}>Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах, с 1886 года — Петербургская консерватория. Первое постоянное в Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных зданий в Европе XVIII.</Text>
+            <Center flexDirection={'column'} gap={{ sm: '30px', sl: '30px' }} w={{ xl: '42%', lg: '42%', md: '42%', sm: '90%', sl: '90%' }} alignItems={'flex-start'} justifyContent={'center'}>
+              <Text fontSize={{xl: '70px', lg: '70px', md: '70px', sm: '64px', sl: '45px'}} style={{fontWeight: '700', letterSpacing: '5px' }}>Большой театр</Text>
+              <Text variant={'p'} w={{ xl: '100%', lg: '100%', md: '100%', sm: '530px', sl: '100%' }} position={'relative'}>Большо́й теа́тр — петербургский театр, существовавший в 1784—1886 годах, с 1886 года — Петербургская консерватория. Первое постоянное в Санкт-Петербурге, крупнейшее в России и одно из крупнейших театральных зданий в Европе XVIII.</Text>
               <Button w={'160px'} h={'50px'} bg={'#D1A954'} fontWeight={'100'} textTransform={'uppercase'}>афиша</Button>
             </Center>
 
-            <Box w={'52%'} display={{ xl: 'flex', lg: 'flex', md: 'none', sm: 'none' }} alignItems={'center'} justifyContent={'center'}>
+            <Box w={'52%'} display={{ xl: 'flex', lg: 'flex', md: 'none', sm: 'none', sl: 'none' }} alignItems={'center'} justifyContent={'center'}>
               <Box w={'400px'} h={'600px'} overflow={'hidden'} position={'relative'} display={'flex'} flexDirection={'column'} gap={'35px'}>
                 <Box position={'relative'} w={'100%'} h={'100%'} >
                   <Img style={{ width: '380px', position: 'absolute', zIndex: 100 }} src={Books} alt={'books'} />
